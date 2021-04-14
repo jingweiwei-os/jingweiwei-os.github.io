@@ -1,42 +1,23 @@
-﻿<!Doctype html>
+<!DOCTYPE html>
 <html>
-<style>
-#container {
-  width: 400px;
-  height: 400px;
-  position: relative;
-  background: blue;
-}
-#animate {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background: red;
-}
-</style>
 <body>
 
+<h1>JavaScript Prompt</h1>
 
-  <p><button onclick="myMove()"点击我试试</button></p> 
+<button onclick="myFunction()">试一试</button>
 
-<h1>我的第一个 JavaScript 动画</h1>
-<div id="container">
-<div id="animate"></div>
-</div>
-  <script>
-function myMove() {
-  var elem = document.getElementById("animate");   
-  var pos = 0;
-  var id = setInterval(frame, 5);
-  function frame() {
-    if (pos == 350) {
-      clearInterval(id);
-    } else {
-      pos++; 
-      elem.style.top = pos + "px"; 
-      elem.style.left = pos + "px"; 
-    }
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var txt;
+  var person = prompt("请输入您的名字：", );
+  if (person == null || person == "") {
+    txt = "用户取消输入";
+  } else {
+    txt = "你好，" + person + "！今天过得好吗？";
   }
+  document.getElementById("demo").innerHTML = txt;
 }
 </script>
 
