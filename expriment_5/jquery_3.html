@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>my page3</title>
+    <script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {                                         
+            $("button").click(function () {                     
+                $("#copyBefore").clone().appendTo("#copyAfter");        
+				    });
+        });
+    </script>
+</head>
+<body>
+    <div id="copyBefore">
+        <img src="Desert.jpg" />
+        <img src="Koala.jpg" />
+        <img src="Penguins.jpg" />
+    </div>
+    <button>Click</button>
+    <div id="copyAfter"></div>
+</body>
+</html>
